@@ -28,7 +28,7 @@ class DetailPage():
 
     def get_started(self):
         self.get_started_button.click()
-        #self.driver.find_element_by_xpath(self.get_started_button_xpath).click() //TEST
+        #self.driver.find_element_by_xpath(self.get_started_button_xpath).click()
 
     def chat_button(self):
         self.driver.find_element_by_xpath(self.chat_xpath).click()
