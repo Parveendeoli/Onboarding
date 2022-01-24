@@ -11,8 +11,9 @@ class DetailPage():
         self.select = None
         self.driver = driver
 
-        #self.get_started_button_xpath = "//button[@type='submit']"
+        # self.get_started_button_xpath = "//button[@type='submit']"
         self.get_started_button = driver.find_element(By.XPATH, "//button[@type='submit']")
+        #self.name_textbox = driver.find_element(By.CLASS_NAME, "form-control")
         self.name_textbox_class_name = "form-control"
         self.phone_textbox_name = "phone"
         self.email_textbox_name = "email"
@@ -24,16 +25,18 @@ class DetailPage():
         self.password_id = "password"
         self.confirm_password_id = "password-confirm"
         self.next_button_xpath = "//button[@class='btn btn-primary next']"
-        self.chat_xpath = "//button[@class='InitialMessageBubble__CloseButton-sc-1g1lbsw-2 cogBem']"
+        self.chat_xpath = "//div[@class='VizExIcon__IconWrapper-u2jepa-0 gzEoLT']"
 
     def get_started(self):
         self.get_started_button.click()
-        #self.driver.find_element_by_xpath(self.get_started_button_xpath).click()
 
     def chat_button(self):
+        self.driver.switch_to.frame(1)
         self.driver.find_element_by_xpath(self.chat_xpath).click()
+        self.driver.switch_to.default_content()
 
     def enter_name(self, name):
+        # self.name_textbox.send_keys(name)
         self.driver.find_element_by_class_name(self.name_textbox_class_name).send_keys(name)
 
     def enter_phone(self, phone):

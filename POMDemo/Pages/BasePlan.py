@@ -43,7 +43,7 @@ class Onboard(unittest.TestCase):
         detail.enter_intention()
         detail.enter_password("123456")
         detail.enter_confirm_password("123456")
-        #detail.chat_button()
+        detail.chat_button()
         detail.button_next()
         #setup.i_got()
         #setup.next()
