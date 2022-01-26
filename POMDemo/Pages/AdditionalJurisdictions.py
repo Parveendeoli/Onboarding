@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.common.by import By
 
@@ -8,7 +10,7 @@ class Jurisdiction():
         self.select = None
         self.driver = driver
 
-        self.Add_Jurisdiction_button_xpath = "//button[@class='btn btn-primary next']"
+        self.Add_Jurisdiction_button_xpath = "//span[@class='collapse-title-long']"
         self.Add_Another_button_xpath = "//button[@class='btn float-right btn-plain btn-addmore p-0']"
         self.Entity_Name_name = "jurisdiction[1][name][]"
         self.Select_State_name = "jurisdiction[1][state][]"
@@ -30,7 +32,7 @@ class Jurisdiction():
 
     def state(self):
         self.select = Select(self.driver.find_element(By.NAME, self.Select_State_name))
-        self.select.select_by_visible_text("California")
+        self.select.select_by_visible_text("Delaware")
 
     def formation_date(self, date):
         self.driver.find_element(By.XPATH, self.Formation_Date_xpath).clear()
@@ -45,9 +47,11 @@ class Jurisdiction():
         self.select.select_by_visible_text("LLC")
 
     def chat_button(self):
+        time.sleep(25)
         self.driver.switch_to.frame(1)
         self.driver.find_element(By.XPATH, self.chat_xpath).click()
         self.driver.switch_to.default_content()
 
     def next(self):
+        self.driver.execute_script("window.scrollTo(0, 1000)")
         self.driver.find_element(By.XPATH, self.Next).click()
