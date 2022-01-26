@@ -1,3 +1,5 @@
+from selenium.webdriver.common.by import By
+
 class Setup():
 
     def __init__(self, driver):
@@ -7,9 +9,9 @@ class Setup():
         self.next_button_xpath = "//button[@class='btn btn-primary next']"
 
     def i_got(self):
-        self.driver.find_element_by_xpath(self.i_got_this_xpath).click()
+        self.driver.find_element(By.XPATH, self.i_got_this_xpath).click()
 
     def next(self):
-        self.driver.find_element_by_xpath(self.next_button_xpath).click()
+        self.driver.find_element(By.XPATH, self.next_button_xpath).click()
 
 
