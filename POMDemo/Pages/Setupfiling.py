@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 class Setup():
 
     def __init__(self, driver):
@@ -13,5 +14,3 @@ class Setup():
 
     def next(self):
         self.driver.find_element(By.XPATH, self.next_button_xpath).click()
-
-

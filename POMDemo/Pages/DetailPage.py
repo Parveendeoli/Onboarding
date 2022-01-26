@@ -33,7 +33,6 @@ class DetailPage():
     def chat_button(self):
         self.driver.switch_to.frame(1)
         self.driver.find_element(By.XPATH, self.chat_xpath).click()
-        #self.driver.find_element_by_xpath(self.chat_xpath).click()
         self.driver.switch_to.default_content()
 
     def enter_name(self, name):

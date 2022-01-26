@@ -28,8 +28,8 @@ class Entity():
         self.driver.find_element(By.XPATH, self.Formation_xpath).send_keys(formation)
 
     def entity_number(self, entity_number):
-        self.driver.find_element(By.XPATH, self.Entity_Name_xpath).clear()
-        self.driver.find_element(By.XPATH, self.Entity_Name_xpath).send_keys(entity_number)
+        self.driver.find_element(By.XPATH, self.Entity_Number_xpath).clear()
+        self.driver.find_element(By.XPATH, self.Entity_Number_xpath).send_keys(entity_number)
 
     def entity_type(self):
         self.select = Select(self.driver.find_element(By.NAME, self.Entity_Type_name))
