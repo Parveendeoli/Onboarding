@@ -14,6 +14,7 @@ class Entity():
         self.Entity_Number_xpath = "//input[@placeholder='Entity Number']"
         self.Entity_Type_name = "type[]"
         self.Next_Button_xpath = "//button[@class='btn btn-primary next']"
+        self.chat_xpath = "//div[@class='VizExIcon__IconWrapper-u2jepa-0 gzEoLT']"
 
     def entity_name(self, entityname):
         self.driver.find_element(By.XPATH, self.Entity_Name_xpath).clear()
@@ -34,6 +35,11 @@ class Entity():
     def entity_type(self):
         self.select = Select(self.driver.find_element(By.NAME, self.Entity_Type_name))
         self.select.select_by_visible_text("LLC")
+
+    def chat_button(self):
+        self.driver.switch_to.frame(1)
+        self.driver.find_element(By.XPATH, self.chat_xpath).click()
+        self.driver.switch_to.default_content()
 
     def next(self):
         self.driver.find_element(By.XPATH, self.Next_Button_xpath).click()

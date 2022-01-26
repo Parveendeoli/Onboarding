@@ -52,6 +52,7 @@ class Onboard(unittest.TestCase):
         entity.formation("01/05/2022")
         entity.entity_number("202265555")
         entity.entity_type()
+        entity.chat_button()
         entity.next()
         jurisdiction.jurisdiction()
         jurisdiction.add()
