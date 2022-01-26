@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.support.select import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -31,6 +33,7 @@ class DetailPage():
         self.get_started_button.click()
 
     def chat_button(self):
+        time.sleep(15)
         self.driver.switch_to.frame(1)
         self.driver.find_element(By.XPATH, self.chat_xpath).click()
         self.driver.switch_to.default_content()

@@ -54,6 +54,7 @@ class Onboard(unittest.TestCase):
         entity.entity_type()
         entity.chat_button()
         entity.next()
+        jurisdiction.chat_button()
         jurisdiction.jurisdiction()
         jurisdiction.add()
         jurisdiction.entity_name("Apple Inc")
@@ -61,7 +62,7 @@ class Onboard(unittest.TestCase):
         jurisdiction.formation_date("02/10/2022")
         jurisdiction.jurisdiction_number("963695")
         jurisdiction.entity_type()
-        jurisdiction.chat_button()
+        # jurisdiction.chat_button()
         jurisdiction.next()
         plan.annual()
 
