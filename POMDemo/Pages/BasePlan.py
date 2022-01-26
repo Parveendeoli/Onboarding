@@ -55,7 +55,7 @@ class Onboard(unittest.TestCase):
         entity.next()
         jurisdiction.jurisdiction()
         jurisdiction.add()
-        jurisdiction.entityname("Apple Inc")
+        jurisdiction.entity_name("Apple Inc")
         jurisdiction.state()
         jurisdiction.formation_date("02/10/2022")
         jurisdiction.jurisdiction_number("963695")
