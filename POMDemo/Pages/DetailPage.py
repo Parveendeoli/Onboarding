@@ -27,7 +27,7 @@ class DetailPage():
         self.password_id = "password"
         self.confirm_password_id = "password-confirm"
         self.next_button_xpath = "//button[@class='btn btn-primary next']"
-        self.chat_xpath = "//div[@class='VizExIcon__IconWrapper-u2jepa-0 gzEoLT']"
+        self.chat_xpath = "//div[@class='VizExIcon__IconWrapper-vk957b-0 cnIHbO']"
 
     def get_started(self):
         self.get_started_button.click()

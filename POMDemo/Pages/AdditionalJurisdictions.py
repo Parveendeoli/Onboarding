@@ -18,12 +18,13 @@ class Jurisdiction():
         self.Jurisdiction_Number_xpath = "//input[@placeholder='Jurisdiction Number']"
         self.Entity_Type_xpath = "//select[@name='jurisdiction[1][type][]']"
         self.Next = "//button[@class='btn btn-primary next']"
-        self.chat_xpath = "//div[@class='VizExIcon__IconWrapper-u2jepa-0 gzEoLT']"
+        self.chat_xpath = "//div[@class='VizExIcon__IconWrapper-vk957b-0 cnIHbO']"
 
     def jurisdiction(self):
         self.driver.find_element(By.XPATH, self.Add_Jurisdiction_button_xpath).click()
 
     def add(self):
+        time.sleep(10)
         self.driver.find_element(By.XPATH, self.Add_Another_button_xpath).click()
 
     def entity_name(self, name):
@@ -54,4 +55,5 @@ class Jurisdiction():
 
     def next(self):
         self.driver.execute_script("window.scrollTo(0, 1000)")
+        time.sleep(25)
         self.driver.find_element(By.XPATH, self.Next).click()

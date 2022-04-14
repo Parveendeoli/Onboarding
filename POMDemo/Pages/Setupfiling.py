@@ -13,4 +13,5 @@ class Setup():
         self.driver.find_element(By.XPATH, self.i_got_this_xpath).click()
 
     def next(self):
+        self.driver.execute_script("window.scrollTo(0, 1000)")
         self.driver.find_element(By.XPATH, self.next_button_xpath).click()
